@@ -13,8 +13,4 @@ COPY pom.xml .
 COPY ./src ./src
 COPY ./pom.xml ./pom.xml
 
-RUN ./mvnw dependency:go-offline -B
-
-RUN ./mvnw package -DskipTests
-
 ENTRYPOINT ["java","-jar","target/dreamtrip-0.0.1-SNAPSHOT.jar"]
