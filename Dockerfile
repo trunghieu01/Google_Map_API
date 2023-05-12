@@ -12,5 +12,6 @@ COPY pom.xml .
 # Copy the project source
 COPY ./src ./src
 COPY ./pom.xml ./pom.xml
+COPY target/dreamtrip-0.0.1-SNAPSHOT.jar /app.jar
 
-ENTRYPOINT ["java","-jar","target/dreamtrip-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/app.jar"]
